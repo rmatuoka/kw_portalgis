@@ -1,0 +1,381 @@
+*
+{
+	margin:0px;
+	padding:0px;
+}
+
+img
+{
+	border:none;
+}
+
+a
+{
+	text-decoration:none;
+}
+
+a:hover
+{
+	text-decoration:underline;
+}
+
+body
+{
+	background-color:#fefefd;
+	background-image:url('/images/backgrounds/default.jpg');
+	background-repeat:repeat-x;
+	text-align:center;
+}
+
+#TopBar
+{
+	position:absolute;
+	width:100%;
+	height:29px;
+	background-image:url('/images/template/bg_top_bar.png');
+	background-repeat:repeat-x;
+}
+
+#General
+{
+	position:relative;
+	width:960px;
+	margin:auto;
+	text-align:left;
+}
+
+	#General #Header #Menu
+	{
+		position:absolute;
+		top:0px;
+		left:320px;
+		width:640px;
+		height:52px;
+		background-image:url('/images/template/bg_menu_bar.png');
+		background-repeat:no-repeat;
+		z-index:2;
+	}
+	
+		#General #Header #Menu input
+		{
+			margin-top:4px;
+			margin-left:15px;
+			width:300px;
+			height:31px;
+			background-image:url('/images/template/bg_search_input.gif');
+			background-repeat:no-repeat;
+			border:none;
+			font-family:Tahoma;
+			font-size:18px;
+			color:#6f6f6f !important;
+			padding-left:10px;
+			padding-right:45px;
+		}
+		
+		#General #Header #Menu #Search
+		{
+			float:left;
+			width:351px;
+			height:39px;
+		}
+		
+		#General #Header #Menu #Icons
+		{
+			padding-left:15px;
+			float:right;
+			width:233px;
+			height:38px;
+			background-image:url('/images/template/bg_menu_sep.gif');
+			background-repeat:no-repeat;
+		}
+		
+			#General #Header #Menu #Icons ul
+			{
+				
+			}
+			
+				#General #Header #Menu #Icons ul li
+				{
+					cursor:pointer;
+					display:inline-block;
+					text-align:center;
+					width:40px;
+					height:38px;
+					list-style-type:none;
+					vertical-align:top;
+				}
+				
+					#General #Header #Menu #Icons ul li:hover
+					{
+						background-color:#3a3a3a;
+					}
+
+#Content
+{
+	text-align:center;
+	height:auto;
+	min-height:300px;
+	padding-bottom:10px;
+}
+	
+
+	#Content #Box
+	{
+		text-align:left;
+		margin-bottom:20px;
+	}
+
+		#Content #Box #ContentBox
+		{
+			width:90%;
+			text-align:left;
+			margin:auto;
+		}
+		
+		#ContentHeader
+		{
+			padding-bottom:20px;
+			border-bottom:2px solid #e0e0e0;
+			margin-bottom:20px;
+		}
+		
+			#ContentHeader h1
+			{
+				font-family:Tahoma;
+				font-size:18px;
+				color:#6f6f6f !important;
+				font-weight:normal;
+				float:left;
+			}
+		
+			#ContentHeader a
+			{
+				font-family:Tahoma;
+				font-size:14px;
+				color:#0265a4 !important;
+				font-weight:normal;
+				float:right;
+			}
+			
+		#ContentSite
+		{
+			
+		}
+		
+
+
+#Footer
+{
+	width:960px;
+	margin:auto;
+	text-align:left;
+	border-top:1px solid #d6d6d6;
+	padding-top:12px;
+}
+	
+	#Footer a, p
+	{
+		font-family:Tahoma;
+		font-size:11px;
+		color:#8e8e8e;
+	}
+
+	#Footer .Copyright
+	{
+		float:left;
+	}
+	
+	#Footer .Apoio
+	{
+		float:right;
+	}
+
+/*BOX ESQUERDA, MEIO E DIRETA*/
+/*--------------BOX DE FEED --------*/
+.FeedBox
+{
+	width:541px;
+	margin:auto;
+}
+
+	.FeedBox .top
+	{
+		background-image:url('/images/template/fed_box_top.png');
+		background-repeat:no-repeat;
+		width:;
+		height:13px;
+	}
+	
+	.FeedBox .mid
+	{
+		background-image:url('/images/template/fed_box_mid.png');
+		background-repeat:repeat-y;
+		width:;
+		height:auto;
+		min-height:;
+		text-align:center;
+	}
+	
+	.FeedBox .bot
+	{
+		background-image:url('/images/template/fed_box_bot.png');
+		background-repeat:repeat-y;
+		width:;
+		height:14px;
+	}
+	
+	.FeedBox .form
+	{
+		width:370px;
+		height:48px;
+		font-family:Tahoma;
+		font-size:18px;
+		color:#6f6f6f;
+		border:2px solid #f0f0f0;
+		margin-bottom:12px;
+		padding-left:10px;
+	}
+	
+	.FeedBox .textarea
+	{
+		width:370px;
+		height:100px;
+		font-family:Tahoma;
+		font-size:18px;
+		color:#6f6f6f;
+		border:2px solid #f0f0f0;
+		margin-bottom:12px;
+		padding-left:10px;
+	}
+	
+	
+	.FeedBox .Send
+	{
+		float:right;
+	}
+
+/*--------------BOX DE COMUNICADOS --------*/
+.Comunicados
+{
+	width:222px;
+	margin:auto;
+}
+
+	.Comunicados .top
+	{
+		background-image:url('/images/template/com_box_top.png');
+		background-repeat:no-repeat;
+		width:;
+		height:10px;
+	}
+
+	.Comunicados .mid
+	{
+		background-image:url('/images/template/com_box_mid.png');
+		background-repeat:repeat-y;
+		width:;
+		height:auto;
+		min-height:;
+		text-align:center;
+	}
+
+	.Comunicados .bot
+	{
+		background-image:url('/images/template/com_box_bot.png');
+		background-repeat:repeat-y;
+		width:;
+		height:12px;
+	}
+
+	.Comunicados .form
+	{
+		width:409px;
+		height:48px;
+		font-family:Tahoma;
+		font-size:18px;
+		color:#6f6f6f;
+		background-image:url('/images/template/login_box_input.gif');
+		background-repeat:no-repeat;
+		background-color:transparent;
+		border:none;
+		margin-bottom:12px;
+		padding-left:10px;
+	}
+
+
+	.Comunicados .Send
+	{
+		float:right;
+	}
+
+
+.LeftBox
+{
+	border-bottom:2px solid #d1cece;
+	padding-bottom:13px;
+	margin-bottom:13px;
+}
+
+
+#errorExplanation
+{
+	background-color:#ffbebe;
+	border:1px solid #ff7171;
+	text-align:left;
+	margin-bottom:12px;
+	padding:7px;
+}
+
+	#errorExplanation h2
+	{
+		font-family:Tahoma;
+		font-size:16px;
+		color:#3e3e3e !important;
+	}
+	
+	#errorExplanation p
+	{
+		font-family:Tahoma;
+		font-size:12px;
+		color:#3e3e3e !important;
+	}
+	
+	#errorExplanation li
+	{
+		font-family:Tahoma;
+		font-size:12px;
+		color:#3e3e3e !important;
+		margin-left:20px;
+	}
+
+/*----------------------- FORMULARIO -------- */
+.DataLabel
+{
+	width:147px;
+	height:48px;
+	font-family:Tahoma;
+	font-size:16px;
+	color:#6f6f6f;
+	text-align:right;
+	padding-right:10px;
+	border-right:1px solid #f9f6f6;
+}
+
+.DataLabelOn
+{
+	color:#ffffff;
+	background-image:url('/images/template/bg_h1_ft.gif');
+	background-repeat:no-repeat;
+}
+
+.DataInput
+{
+	padding-left:10px;
+}
+
+
+.Clear
+{
+	clear:both;
+}
+	

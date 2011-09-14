@@ -1,0 +1,14 @@
+<%content_for :head do%>
+	<%= stylesheet_link_tag "notices" %>
+<%end%>
+
+<div id="ContentHeader">
+	<h1><%=@notice.title%></h1>
+	<div class="Clear"></div>
+</div>
+
+<div id="ContentSite">
+	<div id="Notice">
+		<p><%=@notice.message%></p>
+	</div>
+</div>

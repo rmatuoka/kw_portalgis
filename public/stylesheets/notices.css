@@ -1,0 +1,66 @@
+#Notice
+{
+	
+}
+
+	#Notice #NoticeHeader
+	{
+		background-color:#e1f3ff;
+		min-height:68px;
+		height:auto;
+		padding:10px;
+	}
+	
+		#Notice #NoticeHeader h2
+		{
+			font-family:Tahoma;
+			font-size:14px;
+			color:#0265a4 !important;
+			font-weight:normal;
+			float:left;
+		}
+		
+		#Notice #NoticeHeader .ocultar
+		{
+			font-family:Tahoma;
+			font-size:10px;
+			color:#0265a4 !important;
+			font-weight:normal;
+			float:right;
+		}
+		
+			#Notice #NoticeHeader #PublishedDate
+			{
+				font-family:Tahoma;
+				font-size:12px;
+				color:#6f6f6f !important;				
+			}
+			
+			#Notice #NoticeHeader #PublishedDate .pub
+			{
+				float:left;	
+			}
+			
+			#Notice #NoticeHeader #PublishedDate .unpub
+			{
+				float:right;	
+			}
+	
+	#Notice #NoticeContent
+	{
+		margin-top:2px;
+		background-color:#f2f2f2;
+		min-height:68px;
+		height:auto;
+		padding:10px;
+		font-family:Tahoma;
+		font-size:12px;
+		color:#6f6f6f !important;
+	}
+	
+		#Notice #NoticeContent p
+		{
+			font-family:Tahoma;
+			font-size:12px;
+			color:#6f6f6f !important;
+		}

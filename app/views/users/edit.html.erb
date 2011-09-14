@@ -1,0 +1,31 @@
+<%content_for :head do%>
+	<%= stylesheet_link_tag "first_step" %>
+	<%= javascript_include_tag "functions" %>
+	
+	<script>
+		$(document).ready(function(){
+			//VALIDACAO
+			$("#user_rg").mask("99.999.999-*",{placeholder:"_"});
+			$("#user_cpf").mask("999.999.999-99",{placeholder:"_"});
+			$("#user_phone").mask("(99) 9999-9999",{placeholder:"_"});
+			$("#user_phone1").mask("(99) 9999-9999",{placeholder:"_"});
+			$("#user_phone2").mask("(99) 9999-9999",{placeholder:"_"});
+			$("#user_phone3").mask("(99) 9999-9999",{placeholder:"_"});
+			$("#user_ae_cep").mask("99999-999",{placeholder:"_"});
+		});
+	</script>
+<%end%>
+
+<div id="Salute">
+	<div class="Welcome">Bem-vindo <span><%=current_user.username%>!</span></div>
+	<div class="Clear"></div>
+	<p>
+		Olá, vimos que este é o seu primeiro acesso ao Portal de Gestores de Informação, para continuar, complete o seu cadastro. 
+		
+	</p>
+</div>
+<div id="ContentForm">
+	<%=render "form"%>
+</div>
+
+<div class="Clear"></div>

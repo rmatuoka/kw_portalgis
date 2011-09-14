@@ -1,0 +1,30 @@
+<%content_for :head do%>
+	<%= stylesheet_link_tag "login" %>
+<%end%>
+
+	<div id="Box" class="Login">
+		<div class="top"></div>
+		<div class="mid">
+			<div id="ContentBox">
+				<% form_for @user_session do |f| %>
+				  <%= f.error_messages %>
+				  <p>
+				  	<%= f.text_field :username, :class => "form", :value => "Usuário" %>
+				  </p>
+				  <p>
+				    <%= f.password_field :password, :class => "form", :value => "Senha" %>
+				  </p>
+				  <p class="ForgetPass"><%=link_to("Esqueceu a senha?", "#")%></p>
+
+				<p class="Send"><%= image_submit_tag("template/buttons/entrar.gif") %></p>
+				<% end %>
+				
+				
+				<div class="Clear"></div>
+			</div>
+			
+		</div>
+		<div class="bot"></div>
+	</div>
+	
+	

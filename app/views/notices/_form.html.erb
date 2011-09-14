@@ -1,0 +1,27 @@
+<% form_for @notice do |f| %>
+<%= f.error_messages %>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td class="DataLabel">Título</td>
+		<td class="DataInput"><%= f.text_field :title, :class => "form"%></td>
+	</tr>
+	<tr>
+		<td class="DataLabel">Mensagem</td>
+		<td class="DataInput"><%= f.text_area :message, :class => "textarea"%></td>
+	</tr>
+	<tr>
+		<td class="DataLabel">Expira em</td>
+		<td class="DataInput"><%= f.datetime_select :expira_em %></td>
+	</tr>
+	<tr>
+		<td class="DataLabel">Publicar?</td>
+		<td class="DataInput"><%=f.check_box :published %></td>
+	</tr>
+</table>
+
+<p class="Send">
+	<%=image_submit_tag("template/buttons/publicar.png")%>
+</p>
+<div class="Clear"></div>
+<%end%>

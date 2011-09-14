@@ -1,0 +1,10 @@
+<h2>Comunicados</h2>
+
+<%if !@notices_view.blank?%>
+	<%@notices_view.each do |notice|%>
+		<div class="Unilever_Notification">
+			<%=link_to notice.title, notice_path(notice) %><br/>
+			<%=notice.created_at%>
+		</div>
+	<%end%>
+<%end%>

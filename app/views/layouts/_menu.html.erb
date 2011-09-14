@@ -1,0 +1,18 @@
+<div id="Menu">
+	<div id="Search">
+		<%=form_tag '/search', :method => :get, :name=>"formkeyword"%>
+			<%=text_field_tag :keyword, nil%>
+		</form>
+	</div>
+	
+	
+	<div id="Icons">
+		<ul>
+			<li><%=image_tag("template/icons/message.png")%></li>
+			<li><%=image_tag("template/icons/survey.png")%></li>
+			<li><%=image_tag("template/icons/comments.png")%></li>
+			<li><%=image_tag("template/icons/media_center.png")%></li>
+			<li><%=image_tag("template/icons/config.png")%></li>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Portal Gi <%=yield :title%></title>
+  <%= stylesheet_link_tag "template" %>
+  <%= javascript_include_tag "jquery" %>
+  <%= javascript_include_tag "masked_input" %>
+  <%= csrf_meta_tag %>
+  <%=yield :head%>
+</head>
+<body>
+<div id="TopBar"></div>
+<div id="General">
+	<div id="Header">
+		<div id="Logo"><%=link_to(image_tag("template/logo.png"), "#")%></div>
+		<%=yield :menu%>
+	</div>
+	
+	<div id="Content">
+		<%= yield %>
+	</div>
+	
+</div>
+<%=render :file => "layouts/_footer.html.erb"%>
+
+</body>
+</html>

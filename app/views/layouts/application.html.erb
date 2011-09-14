@@ -1,14 +1,76 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>KwPortalgis</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
+  <title>Portal Gi <%=yield :title%></title>
+  <%= stylesheet_link_tag "template" %>
+  <%= stylesheet_link_tag "dashboard" %>
+  <%= javascript_include_tag 'jquery', 'application' %>
+  <%= javascript_include_tag "masked_input" %>
   <%= csrf_meta_tag %>
+  <%=yield :head%>
 </head>
 <body>
-
-<%= yield %>
+<div id="TopBar"></div>
+<div id="General">
+	<div id="Header">
+		<div id="Logo"><%=link_to(image_tag("template/logo.png"), root_path)%></div>
+		<%=yield :menu%>
+	</div>
+	
+	<div id="Content">
+		<div id="UserBar">
+			<div id="Profile" class="LeftBox">
+				<%=image_tag("template/avatar/blank.png")%>
+				<h2><%=current_user.name%></h2>
+				<%=image_tag("template/ico_edit.png", :align => "absmiddle")%><%=link_to "Editar Perfil", edit_user_path(current_user)%>
+			</div>
+			
+			<div id="UnileverMenu" class="LeftBox">
+				<%=link_to "Pesquisas", "#"%>
+				<%=link_to "Comunicados", notices_path%>
+			</div>
+			
+			<div id="Filters">
+				<%=yield :filters%>					
+			</div>
+		</div>
+		
+		
+		
+		<div id="NotificationBar">
+			<div id="Box" class="Comunicados">
+				<div class="top"></div>
+				<div class="mid">
+					<div id="ContentBox">
+						<%=render :file => "layouts/_notifications.html.erb"%>
+					</div>
+				</div>
+				<div class="bot"></div>
+			</div>
+			
+			<div id="Friends">
+				<%=render :file => "layouts/_friends.html.erb"%>
+			</div>
+		</div>
+		
+		<div id="Feed">
+			<div id="Box" class="FeedBox">
+				<div class="top"></div>
+				<div class="mid">
+					<div id="ContentBox">
+						<%= yield %>
+					</div>
+				</div>
+				<div class="bot"></div>
+			</div>
+		</div>
+		
+		<div class="Clear"></div>
+		
+	</div>
+	
+</div>
+<%=render :file => "layouts/_footer.html.erb"%>
 
 </body>
 </html>

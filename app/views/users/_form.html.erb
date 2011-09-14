@@ -1,0 +1,135 @@
+<% form_for @user, :html => { :multipart => true } do |f| %>
+<%= f.error_messages %>
+
+<div id="Box" class="Register">
+	<div class="top"></div>
+	<div class="mid">
+		<div id="ContentBox">
+			<h1>Dados de Login</h1>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td class="DataLabel" id="tdUsuario">Usuário</td>
+					<td class="DataInput"><%= f.text_field :username, :class => "form", :onfocus => "CadFocus('tdUsuario', 1)", :onblur => "CadFocus('tdUsuario', 0)" %></td>
+				</tr>
+				<tr>
+					<td class="DataLabel" id="tdEmail">E-Mail</td>
+					<td class="DataInput"><%= f.text_field :email, :class => "form", :onfocus => "CadFocus('tdEmail', 1)", :onblur => "CadFocus('tdEmail', 0)"  %></td>
+				</tr>
+				<tr>
+					<td class="DataLabel" id="tdSenha">Senha</td>
+					<td class="DataInput"><%= f.password_field :password, :class => "form", :onfocus => "CadFocus('tdSenha', 1)", :onblur => "CadFocus('tdSenha', 0)"  %></td>
+				</tr>
+				<tr>
+					<td class="DataLabel" id="tdConfirmSenha">Confirme a sua senha</td>
+					<td class="DataInput"><%= f.password_field :password_confirmation, :class => "form", :onfocus => "CadFocus('tdConfirmSenha', 1)", :onblur => "CadFocus('tdConfirmSenha', 0)"  %></td>
+				</tr>
+			</table>
+
+		</div>
+	</div>
+	<div class="bot"></div>
+</div>
+
+<div id="Box" class="Register">
+	<div class="top"></div>
+	<div class="mid">
+		<div id="ContentBox">
+			<h1>Dados Pessoais</h1>
+			
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td class="DataLabel" id="tdAvatar">Foto</td>
+					<td class="DataInput"><%= f.file_field :avatar, :class => "form", :style => "background-image:none;", :onfocus => "CadFocus('tdAvatar', 1)", :onblur => "CadFocus('tdAvatar', 0)"  %></td>
+				</tr>
+				<tr>
+					<td class="DataLabel" id="tdNome">Nome Completo</td>
+					<td class="DataInput"><%= f.text_field :name, :class => "form", :onfocus => "CadFocus('tdNome', 1)", :onblur => "CadFocus('tdNome', 0)"  %></td>
+				</tr>
+				<tr>
+					<td class="DataLabel" id="tdCelular">Celular</td>
+					<td class="DataInput"><%= f.text_field :phone, :class => "form", :onfocus => "CadFocus('tdCelular', 1)", :onblur => "CadFocus('tdCelular', 0)"  %></td>
+				</tr>
+				<tr>
+					<td class="DataLabel" id="tdRg">RG</td>
+					<td class="DataInput"><%= f.text_field :rg, :class => "form", :onfocus => "CadFocus('tdRg', 1)", :onblur => "CadFocus('tdRg', 0)"  %></td>
+				</tr>
+				<tr>
+					<td class="DataLabel" id="tdCpf">CPF</td>
+					<td class="DataInput"><%= f.text_field :cpf, :class => "form", :onfocus => "CadFocus('tdCpf', 1)", :onblur => "CadFocus('tdCpf', 0)"  %></td>
+				</tr>
+				
+				<tr>
+					<td class="DataLabel" id="tdPhone1">Telefone Res</td>
+					<td class="DataInput"><%= f.text_field :phone1, :class => "form", :onfocus => "CadFocus('tdPhone1', 1)", :onblur => "CadFocus('tdPhone1', 0)"  %></td>
+				</tr>
+				<tr>
+					<td class="DataLabel" id="tdPhone2">Telefone Com</td>
+					<td class="DataInput"><%= f.text_field :phone2, :class => "form", :onfocus => "CadFocus('tdPhone2', 1)", :onblur => "CadFocus('tdPhone2', 0)"  %></td>
+				</tr>
+				<tr>
+					<td class="DataLabel" id="tdPhone3">Telefone Com</td>
+					<td class="DataInput"><%= f.text_field :phone3, :class => "form", :onfocus => "CadFocus('tdPhone3', 1)", :onblur => "CadFocus('tdPhone3', 0)"  %></td>
+				</tr>
+				
+			</table>
+		</div>
+	</div>
+	<div class="bot"></div>
+</div>
+
+
+<div id="Box" class="Register">
+	<div class="top"></div>
+	<div class="mid">
+		<div id="ContentBox">
+			<h1>Dados AE</h1>
+			
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td class="DataLabel" id="tdAe">AE</td>
+					<td class="DataInput"><%= f.text_field :ae_ae, :class => "form", :onfocus => "CadFocus('tdAe', 1)", :onblur => "CadFocus('tdAe', 0)" %></td>
+				</tr>
+				<tr>
+					<td class="DataLabel" id="tdPerfil">Perfil</td>
+					<td class="DataInput"><%= f.text_field :ae_profile, :class => "form", :onfocus => "CadFocus('tdPerfil', 1)", :onblur => "CadFocus('tdPerfil', 0)" %></td>
+				</tr>
+				<tr>
+					<td class="DataLabel" id="tdRegiao">Região</td>
+					<td class="DataInput"><%= f.text_field :ae_region, :class => "form", :onfocus => "CadFocus('tdRegiao', 1)", :onblur => "CadFocus('tdRegiao', 0)" %></td>
+				</tr>
+				<tr>
+					<td class="DataLabel" id="tdEndereco">Endereço</td>
+					<td class="DataInput"><%= f.text_field :ae_address, :class => "form", :onfocus => "CadFocus('tdEndereco', 1)", :onblur => "CadFocus('tdEndereco', 0)" %></td>
+				</tr>
+				<tr>
+					<td class="DataLabel" id="tdComplemento">Complemento</td>
+					<td class="DataInput"><%= f.text_field :ae_complement, :class => "form", :onfocus => "CadFocus('tdComplemento', 1)", :onblur => "CadFocus('tdComplemento', 0)" %></td>
+				</tr>
+				<tr>
+					<td class="DataLabel" id="tdBairro">Bairro</td>
+					<td class="DataInput"><%= f.text_field :ae_neighborhood, :class => "form", :onfocus => "CadFocus('tdBairro', 1)", :onblur => "CadFocus('tdBairro', 0)" %></td>
+				</tr>
+				<tr>
+					<td class="DataLabel" id="tdCidade">Cidade</td>
+					<td class="DataInput"><%= f.text_field :ae_city, :class => "form", :onfocus => "CadFocus('tdCidade', 1)", :onblur => "CadFocus('tdCidade', 0)" %></td>
+				</tr>
+				<tr>
+					<td class="DataLabel"  id="tdEstado">Estado</td>
+					<td class="DataInput"><%= f.text_field :ae_state, :class => "form", :onfocus => "CadFocus('tdEstado', 1)", :onblur => "CadFocus('tdEstado', 0)" %></td>
+				</tr>
+				<tr>
+					<td class="DataLabel" id="tdCep">CEP</td>
+					<td class="DataInput"><%= f.text_field :ae_cep, :class => "form", :onfocus => "CadFocus('tdCep', 1)", :onblur => "CadFocus('tdCep', 0)" %></td>
+				</tr>
+				
+			</table>
+		</div>
+	</div>
+	<div class="bot"></div>
+
+	<p class="Send"><%= image_submit_tag "template/buttons/concluir.gif" %></p>
+</div>
+
+
+
+<% end %>
