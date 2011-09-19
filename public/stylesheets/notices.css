@@ -9,6 +9,7 @@
 		min-height:68px;
 		height:auto;
 		padding:10px;
+		margin-top:5px;
 	}
 	
 		#Notice #NoticeHeader h2
@@ -20,7 +21,7 @@
 			float:left;
 		}
 		
-		#Notice #NoticeHeader .ocultar
+		#Notice #NoticeHeader .mostrar
 		{
 			font-family:Tahoma;
 			font-size:10px;

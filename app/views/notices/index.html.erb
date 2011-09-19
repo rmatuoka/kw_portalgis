@@ -1,7 +1,15 @@
 <%content_for :head do%>
 	<%= stylesheet_link_tag "notices" %>
 <%end%>
-
+<script type="text/javascript"> 
+	$(document).ready(function() {
+		$('.hidden').hide();
+		$('.mostrar').click(function() {
+			var id_notice = $(this).attr("rel");
+			$('.content_n_' + id_notice).slideToggle();
+		})
+	})
+	</script>
 <div id="ContentHeader">
 	<h1>Comunicados</h1>
 	<%=link_to "[ adicionar comunicado ]", new_notice_path%>
@@ -26,7 +34,7 @@
 				
 				<%=notice.title%>
 			</h2>
-			<%=link_to "[ ocultar ]", "#", :class => "ocultar"%>
+			<%=link_to "[ ocultar / mostrar ]", "#", :rel => notice.id, :class=>"mostrar"%>
 			<div class="Clear"></div>
 			<br>
 			<div id="PublishedDate">
@@ -36,7 +44,7 @@
 			
 		</div>
 		
-		<div id="NoticeContent">
+		<div id="NoticeContent" class="hidden content_n_<%=notice.id%>">
 			<%=notice.message%>
 		</div>
 	</div>

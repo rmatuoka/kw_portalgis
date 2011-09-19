@@ -1,11 +1,18 @@
 <%content_for :menu do%>
 	<%=render :file => "layouts/_menu.html.erb"%>
 <%end%>
-
+<script type="text/javascript"> 
+	$(document).ready(function() {
+		$('.hidden').hide();
+		$('.mostrar').click(function() {
+			var id_comment = $(this).attr("rel");
+			$('.content_c_' + id_comment).slideToggle();
+		})
+	})
+	</script>
 <%content_for :filters do%>
 	<%#=render :file => "layouts/_filters.html.erb"%>
 <%end%>
-
 <div id="Mural">
 	<div id="Share">
 		<%form_for @post do |f|%>
@@ -31,39 +38,39 @@
 			</p>
 		</div>
 	
-		<div id="Comments">
+		<div id="Comments" =>
 			<div id="Title">
 				<h2>Comentários</h2>
-				<%=link_to "[ ocultar ]", "#"%>
+				<%=link_to "[ ocultar / mostrar ]", "#", :rel => post.id, :class=>"mostrar"%>
 			</div>
-			
-			<%post.comments.all.each do |comment|%>
-			<div id="Comment">
-				<div id="Photo">
-					<%=image_tag("template/avatar/blank_chat.jpg")%>
-				</div>
-			
-				<div id="Text">
-					por <%=comment.user.name%> - 00/00/00 - 00:00<br/><br/>
+			<div class="hidden content_c_<%=post.id%>">
+				<%post.comments.all.each do |comment|%>
+				<div id="Comment" >
+					<div id="Photo">
+						<%=image_tag("template/avatar/blank_chat.jpg")%>
+					</div>
 				
-					<p><%=comment.comment%></p>
-				</div>
-			
-				<div class="Clear"></div>
-			</div>
-			<%end%>
-			
-			<div id="Write_Comment">
-				Deixe seu comentário:
+					<div id="Text">
+						por <%=comment.user.name%> - 00/00/00 - 00:00<br/><br/>
+					
+						<p><%=comment.comment%></p>
+					</div>
 				
-				<%=form_for ([post, post.comments.build])  do |f|%>
-					<%=f.text_area :comment, :class=>"form_comment"%>
-					<%=f.hidden_field :user_id, :value => current_user.id%>
-					<%=image_submit_tag("template/buttons/enviar.png", :align => "right")%>
+					<div class="Clear"></div>
+				</div>
 				<%end%>
-				<div class="Clear"></div>
+	
+				<div id="Write_Comment" >
+					Deixe seu comentário:
+					
+					<%=form_for ([post, post.comments.build])  do |f|%>
+						<%=f.text_area :comment, :class=>"form_comment"%>
+						<%=f.hidden_field :user_id, :value => current_user.id%>
+						<%=image_submit_tag("template/buttons/enviar.png", :align => "right")%>
+					<%end%>
+					<div class="Clear"></div>
+				</div>
 			</div>
-		
 			<!-- 
 			<div id="Comment">
 				<div id="Photo">
@@ -134,7 +141,6 @@
 	</div>
 	
 </div>
-=======
 <%content_for :menu do%>
 	<%=render :file => "layouts/_menu.html.erb"%>
 <%end%>
