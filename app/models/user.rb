@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   has_many :posts
   has_many :notice_read
   has_many :notices, :through => :notice_read
+
   
   def self.find_by_name(name)  
     User.first(:conditions => ['username = ?', name])

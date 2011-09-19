@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%content_for :menu do%>
 	<%=render :file => "layouts/_menu.html.erb"%>
 <%end%>
@@ -141,6 +142,9 @@
 	</div>
 	
 </div>
+=======
+
+>>>>>>> muts
 <%content_for :menu do%>
 	<%=render :file => "layouts/_menu.html.erb"%>
 <%end%>
@@ -182,7 +186,7 @@
 	<div id="FeedContent">
 	<%@posts.each do |post|%>
 		<div id="Feed_Header">
-			<%=image_tag("template/avatar/blank_chat.jpg", :align => "left")%>
+			<%=link_to(image_tag(post.user.avatar.url("icon")), "http://localhost:3000/" + post.user.username)%>
 			<h1><%=post.title%></h1>
 			por <%=post.user.name%> - 00/00/00 - 00:00
 		</div>

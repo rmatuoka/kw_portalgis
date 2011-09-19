@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%content_for :head do%>
 	<%= stylesheet_link_tag "notices" %>
 <%end%>
@@ -50,3 +51,53 @@
 	</div>
 	<%end%>
 </div>
+=======
+<%content_for :menu do%>
+	<%=render :file => "layouts/_menu.html.erb"%>
+<%end%>
+
+<%content_for :head do%>
+	<%= stylesheet_link_tag "notices" %>
+<%end%>
+
+<div id="ContentHeader">
+	<h1>Comunicados</h1>
+	<%=link_to "[ adicionar comunicado ]", new_notice_path%>
+	
+	<div class="Clear"></div>
+</div>
+
+<div id="ContentSite">
+	<%@notices.each do |notice|%>
+	<div id="Notice">
+		<div id="NoticeHeader">
+			<h2>
+				<%= link_to image_tag("template/ico_del.png"), notice_path(notice), :confirm => 'Você deseja realmente excluir este comunicado?', :method => :delete %>
+				
+				<%= link_to image_tag("template/ico_edit.png"), edit_notice_path(notice) %>
+				
+				<%if notice.published?%>
+					<%=image_tag("template/ico_pub.png")%>
+				<%else%>
+					<%=image_tag("template/ico_unpub.png")%>
+				<%end%>
+				
+				<%=notice.title%>
+			</h2>
+			<%=link_to "[ ocultar ]", "#", :class => "ocultar"%>
+			<div class="Clear"></div>
+			<br>
+			<div id="PublishedDate">
+				<span class="pub">Publicado em: <%=notice.created_at%></span>
+				<span class="unpub">Expira em: <%=notice.expira_em%></span>
+			</div>
+			
+		</div>
+		
+		<div id="NoticeContent">
+			<%=notice.message%>
+		</div>
+	</div>
+	<%end%>
+</div>
+>>>>>>> muts

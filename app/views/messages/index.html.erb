@@ -1,0 +1,42 @@
+<%content_for :menu do%>
+	<%=render :file => "layouts/_menu.html.erb"%>
+<%end%>
+
+<%content_for :head do%>
+	<%= stylesheet_link_tag "messages" %>
+<%end%>
+
+<div id="ContentHeader">
+	<h1>Mensagens</h1>
+	<!-- <%=link_to "[ Enviar Nova Mensagem ]", new_message_path%> -->
+	
+	<div class="Clear"></div>
+</div>
+
+<div id="ContentSite">
+	<%if flash[:notice]%>
+		<%=flash[:notice]%>
+	<%end%>
+	<%@messages.each do |message|%>
+	<div id="Message">
+		<div id="MessageHeader">
+			
+			<h2>
+				<%= link_to image_tag("template/ico_del.png"), message_path(message), :confirm => 'Você deseja realmente excluir esta mensagem?', :method => :delete %>
+				
+				<%=link_to message.title, message_path(message)%>
+			</h2>
+			
+			
+			<div class="Clear"></div>
+
+			<div id="PublishedDate">
+				<span class="pub">De: </span>
+				<div class="Clear"></div>
+				<span class="pub">Enviado em: <%=message.created_at%></span>
+			</div>
+			
+		</div>
+	</div>
+	<%end%>
+</div>
