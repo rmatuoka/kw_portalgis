@@ -56,7 +56,7 @@
 			<div id="Write_Comment">
 				Deixe seu comentário:
 				
-				<%form_for ([post, post.comments.build])  do |f|%>
+				<%=form_for ([post, post.comments.build])  do |f|%>
 					<%=f.text_area :comment, :class=>"form_comment"%>
 					<%=f.hidden_field :user_id, :value => current_user.id%>
 					<%=image_submit_tag("template/buttons/enviar.png", :align => "right")%>

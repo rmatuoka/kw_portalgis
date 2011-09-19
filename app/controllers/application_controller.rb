@@ -18,6 +18,9 @@ class ApplicationController < ActionController::Base
   end
   
   def load_notices
-    @notices_view = Notice.all_published
+    #@notices_view = current_user.notices.all_published
+    @notices_view = NoticeRead.all(:conditions => ["user_id = ?", current_user])
+  
+    @friends = User.all(:conditions => ["first_access < 1"])
   end
 end

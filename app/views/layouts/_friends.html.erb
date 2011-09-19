@@ -1,11 +1,4 @@
-<%=image_tag("template/avatar/blank_chat.jpg")%>
-<%=image_tag("template/avatar/blank_chat.jpg")%>
-<%=image_tag("template/avatar/blank_chat.jpg")%>
-<%=image_tag("template/avatar/blank_chat.jpg")%>
-<%=image_tag("template/avatar/blank_chat.jpg")%><br />
+<%@friends.each do |f|%>
+	<%=link_to(image_tag(f.avatar.url("icon")), "http://localhost:3000/" + f.username)%>
+<%end%>
 
-<%=image_tag("template/avatar/blank_chat.jpg")%>
-<%=image_tag("template/avatar/blank_chat.jpg")%>
-<%=image_tag("template/avatar/blank_chat.jpg")%>
-<%=image_tag("template/avatar/blank_chat.jpg")%>
-<%=image_tag("template/avatar/blank_chat.jpg")%>

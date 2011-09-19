@@ -62,6 +62,7 @@ KwPortalgis::Application.routes.draw do |map|
   resources(:posts){
     resources :comments
   }
+  resources :profile
   
   
   map.first_step "first_step", :controller => "users", :action => "edit"
@@ -69,4 +70,6 @@ KwPortalgis::Application.routes.draw do |map|
   map.logout "logout", :controller => "user_sessions", :action => "destroy"
   
   root :to => "dashboard#index"
+  
+  match ":user(.:format)" => "profile#index"
 end

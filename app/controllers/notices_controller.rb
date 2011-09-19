@@ -10,12 +10,30 @@ class NoticesController < ApplicationController
   end
   
   def show
+    #MARCA COMO LIDO
+    @read = current_user.notice_read.first(:conditions => ["notice_id = ?", params[:id]])
+    if !@read.read
+      @read.read = true
+      @read.save
+      redirect_to notice_path(params[:id])
+    end
+    
     @notice = Notice.find(params[:id])
+
   end
 
   def create
     @notice = Notice.new(params[:notice])
     if @notice.save
+      #SALVA COMUNICADO PARA TODOS USUARIOS
+      $users = User.all
+      $users.each do |user|
+        $notice = NoticeRead.new
+        $notice.notice_id = @notice.id
+        $notice.user_id = user.id
+        $notice.save
+      end
+      
       flash[:notice] = "Comunicado cadastrado com sucesso."
       redirect_to notices_path
     else
