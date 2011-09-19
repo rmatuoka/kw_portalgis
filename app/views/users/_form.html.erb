@@ -1,6 +1,25 @@
 <% form_for @user, :html => { :multipart => true } do |f| %>
 <%= f.error_messages %>
-
+<script type="text/javascript"> 
+		$(document).ready(function() {
+			$('input[type="text"], [type="password"]').addClass("idleField");
+       		$('input[type="text"], [type="password"]').focus(function() {
+       			$(this).removeClass("idleField").addClass("focusField");
+    		    if (this.value == this.defaultValue){ 
+    		    	this.value = '';
+				}
+				if(this.value != this.defaultValue){
+	    			this.select();
+	    		}
+    		});
+    		$('input[type="text"], [type="password"]').blur(function() {
+    			$(this).removeClass("focusField").addClass("idleField");
+    		    if ($.trim(this.value) == ''){
+			    	this.value = (this.defaultValue ? this.defaultValue : '');
+				}
+    		});
+		});			
+	</script>
 <div id="Box" class="Register">
 	<div class="top"></div>
 	<div class="mid">

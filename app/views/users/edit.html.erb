@@ -13,6 +13,25 @@
 			$("#user_phone3").mask("(99) 9999-9999",{placeholder:"_"});
 			$("#user_ae_cep").mask("99999-999",{placeholder:"_"});
 		});
+ 
+		$(document).ready(function() {
+			$('input[type="text"], [type="password"]').addClass("idleField");
+       		$('input[type="text"], [type="password"]').focus(function() {
+       			$(this).removeClass("idleField").addClass("focusField");
+    		    if (this.value == this.defaultValue){ 
+    		    	this.value = '';
+				}
+				if(this.value != this.defaultValue){
+	    			this.select();
+	    		}
+    		});
+    		$('input[type="text"], [type="password"]').blur(function() {
+    			$(this).removeClass("focusField").addClass("idleField");
+    		    if ($.trim(this.value) == ''){
+			    	this.value = (this.defaultValue ? this.defaultValue : '');
+				}
+    		});
+		});			
 	</script>
 <%end%>
 
@@ -21,7 +40,6 @@
 	<div class="Clear"></div>
 	<p>
 		Olá, vimos que este é o seu primeiro acesso ao Portal de Gestores de Informação, para continuar, complete o seu cadastro. 
-		
 	</p>
 </div>
 <div id="ContentForm">

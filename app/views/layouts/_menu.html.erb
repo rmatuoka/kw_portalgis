@@ -4,15 +4,65 @@
 			<%=text_field_tag :keyword, nil%>
 		</form>
 	</div>
+<style>
+.hidden{
+	display:none;
+}
+</style>
+<script type="text/javascript"> 
+	$(document).ready(function() {
+		$('.hidden').hide();
+		$('.li1_link').mouseenter(function() {
+			$('#li1_show').show();}).mouseleave(function(){
+			$('#li1_show').hide();
+		return false;
+		})
+		$('.li2_link').mouseenter(function() {
+			$('#li2_show').show();}).mouseleave(function(){
+			$('#li2_show').hide();
+		return false;
+		})
+		$('.li3_link').mouseenter(function() {
+			$('#li3_show').show();}).mouseleave(function(){
+			$('#li3_show').hide();
+		return false;
+		})
+		$('.li4_link').mouseenter(function() {
+			$('#li4_show').show();}).mouseleave(function(){
+			$('#li4_show').hide();
+		return false;
+		})
+		$('.li5_link').mouseenter(function() {
+			$('#li5_show').show();}).mouseleave(function(){
+			$('#li5_show').hide();
+		return false;
+		})
+		
+	})
 	
-	
+</script>	
 	<div id="Icons">
 		<ul>
-			<li><%=image_tag("template/icons/message.png")%></li>
-			<li><%=image_tag("template/icons/survey.png")%></li>
-			<li><%=image_tag("template/icons/comments.png")%></li>
-			<li><%=image_tag("template/icons/media_center.png")%></li>
-			<li><%=image_tag("template/icons/config.png")%></li>
+			<li class='li1_link'><%=image_tag("template/icons/message.png")%></li>
+			<li class='li2_link'><%=image_tag("template/icons/survey.png")%></li>
+			<li class='li3_link'><%=image_tag("template/icons/comments.png")%></li>
+			<li class='li4_link'><%=image_tag("template/icons/media_center.png")%></li>
+			<li class='li5_link'><%=image_tag("template/icons/config.png")%></li>
 		</ul>
+	</div>
+	<div id='li1_show' class='hidden'>
+	Mensagens
+	</div>
+	<div id='li2_show' class='hidden'>
+	Pesquisas
+	</div>
+	<div id='li3_show' class='hidden'>
+	Comentários
+	</div>
+	<div id='li4_show' class='hidden'>
+	Media Center
+	</div>
+	<div id='li5_show' class='hidden'>
+	Configurações
 	</div>
 </div>

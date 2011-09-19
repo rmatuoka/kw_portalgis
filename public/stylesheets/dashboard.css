@@ -85,6 +85,7 @@
 		font-size:12px;
 		color:#6f6f6f;
 		margin-bottom:20px;
+		margin-top:10px;
 	}
 	
 		#Feed #Feed_Header h1
@@ -192,6 +193,7 @@
 				width:460px;
 				height:60px;
 				margin-bottom:3px;
+				resize:vertical;
 			}
 
 .form_share
@@ -201,6 +203,7 @@
 	width:460px;
 	height:60px;
 	margin-bottom:3px;
+	resize:vertical;
 }	
 
 .form_share_title
@@ -210,6 +213,7 @@
 	width:460px;
 	height:18px;
 	margin-bottom:3px;
+	resize:none;
 }		
 			
 			
