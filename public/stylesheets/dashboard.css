@@ -275,3 +275,275 @@
 	
 	
 
+=======
+#UserBar
+{
+	width:140px;
+	height:auto;
+	display:inline-block;
+	float:left;
+}
+	#UserBar #Profile
+	{
+		
+	}
+
+		#UserBar #Profile h2
+		{
+			font-family:Tahoma;
+			font-size:14px;
+			color:#6f6f6f;
+			font-weight:normal;
+			margin-bottom:10px;
+		}
+	
+		#UserBar #Profile a
+		{
+			font-family:Tahoma;
+			font-size:12px;
+			color:#a6a6a6;
+		}
+		
+		#UserBar #UnileverMenu
+		{
+			text-align:right;
+			padding-right:20px;
+		}
+		
+			#UserBar #UnileverMenu a
+			{
+				font-family:Tahoma;
+				font-size:14px;
+				color:#6f6f6f;
+				display:block;
+				margin-bottom:15px;
+			}
+			
+	#UserBar #Filters
+	{
+		text-align:left;
+	}
+
+		#UserBar #Filters h2
+		{
+			font-family:Tahoma;
+			font-size:14px;
+			color:#0780cd;
+			font-weight:normal;
+			margin-bottom:10px;
+		}
+		
+		#UserBar #Filters h3
+		{
+			font-family:Tahoma;
+			font-size:12px;
+			color:#6f6f6f;
+			font-weight:normal;
+			margin-top:10px;
+		}
+		
+		#UserBar #Filters ul li
+		{
+			list-style-type:none;
+			font-family:Tahoma;
+			font-size:12px;
+			color:#6f6f6f;
+			margin-left:10px;
+		}
+		
+
+#Feed
+{
+	display:inline-block;
+}
+
+	#Feed #Feed_Header
+	{
+		font-family:Tahoma;
+		font-size:12px;
+		color:#6f6f6f;
+		margin-bottom:20px;
+		margin-top:10px;
+	}
+	
+		#Feed #Feed_Header h1
+		{
+			font-family:Tahoma;
+			font-size:14px;
+			color:#6f6f6f;
+			font-weight:bold;
+		}
+		
+		#Feed #Feed_Header img
+		{
+			margin-right:5px;
+		}
+		
+		#Feed #Post
+		{
+			padding-bottom:20px;
+			border-bottom:2px solid #d5d5d5;
+		}
+		
+			#Feed #Post p
+			{
+				font-family:Tahoma;
+				font-size:12px !important;
+				color:#6f6f6f;
+			}
+		
+		#Feed #Comments
+		{
+			margin-top:15px;
+		}
+		
+		#Feed #Comments #Title
+		{
+			background-color:#e1f3ff;
+			height:23px;
+			padding-top:10px;
+			padding-left:10px;
+			padding-right:10px;
+		}
+		
+			#Feed #Comments #Title h2
+			{
+				font-family:Tahoma;
+				font-size:12px !important;
+				color:#0265a4;
+				font-weight:normal;
+				float:left;
+			}
+			
+			#Feed #Comments #Title a
+			{
+				font-family:Tahoma;
+				font-size:10px !important;
+				color:#0265a4;
+				font-weight:normal;
+				float:right;
+			}
+			
+			#Feed #Comments #Comment
+			{
+				background-color:#f2f2f2;
+				padding:10px;
+				margin-top:2px;
+			}
+			
+				#Feed #Comments #Comment #Photo
+				{
+					width:50px;
+					float:left;
+				}
+				
+				#Feed #Comments #Comment #Text
+				{
+					width:400px;
+					float:right;
+					font-family:Tahoma;
+					font-size:12px !important;
+					color:#a6a6a6;
+				}
+				
+					#Feed #Comments #Comment #Text p
+					{
+						font-family:Tahoma;
+						font-size:12px !important;
+						color:#6f6f6f;
+					}
+					
+			#Feed #Comments #Write_Comment
+			{
+				background-color:#f2f2f2;
+				padding:10px;
+				margin-top:2px;
+				font-family:Tahoma;
+				font-size:12px !important;
+				color:#717171;
+				
+			}
+			
+			.form_comment
+			{
+				background-color:#ffffff;
+				border:2px solid #d5d5d5;
+				width:460px;
+				height:60px;
+				margin-bottom:3px;
+				resize:vertical;
+			}
+
+.form_share
+{
+	background-color:#ffffff;
+	border:2px solid #d5d5d5;
+	width:460px;
+	height:60px;
+	margin-bottom:3px;
+	resize:vertical;
+}	
+
+.form_share_title
+{
+	background-color:#ffffff;
+	border:2px solid #d5d5d5;
+	width:460px;
+	height:18px;
+	margin-bottom:3px;
+	resize:none;
+}		
+			
+			
+
+
+#NotificationBar
+{
+	display:inline-block;
+	float:right;
+}
+
+	#NotificationBar h2
+	{
+		font-family:Tahoma;
+		font-size:14px;
+		color:#0265a4;
+		font-weight:normal;
+		margin-bottom:18px;
+	}
+	
+	#NotificationBar .Unilever_Notification
+	{
+		font-family:Tahoma;
+		font-size:12px;
+		color:#a6a6a6;
+		padding:5px;
+	}
+	
+	#NotificationBar .Unilever_Notification_New
+	{
+		background-color:#e1f3ff;
+		background-image:url('/images/template/ico_notification_new.gif');
+		background-repeat:no-repeat;
+		background-position:center right;
+		font-family:Tahoma;
+		font-size:12px;
+		color:#a6a6a6;
+		padding:5px;
+	}
+	
+		#NotificationBar .Unilever_Notification a
+		{
+			font-weight:normal;
+			font-family:Tahoma;
+			font-size:14px;
+			color:#787878;
+		}
+		
+		#NotificationBar .Unilever_Notification_New a
+		{
+			font-weight:normal;
+			font-family:Tahoma;
+			font-size:14px;
+			color:#787878;
+		}

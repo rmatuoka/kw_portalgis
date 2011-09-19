@@ -379,3 +379,84 @@ body
 	clear:both;
 }
 	
+/*------------------Tag Menu-------------------------*/
+
+#li1_show{
+	background:url('/images/template/bg_tag_menu.png') no-repeat;
+	width:103px;
+	height:31px;
+	position:absolute;
+	z-index:10;
+	font-family:Tahoma;
+	font-size:12px;
+	color:#fff;
+	text-align:center;
+	vertical-align:central;
+	line-height:37px;
+	top:40px;
+	left:413px;
+	}
+
+#li2_show{
+	background:url('/images/template/bg_tag_menu.png') no-repeat;
+	width:103px;
+	height:31px;
+	position:absolute;
+	z-index:10;
+	font-family:Tahoma;
+	font-size:12px;
+	color:#fff;
+	text-align:center;
+	vertical-align:central;
+	line-height:37px;
+	top:40px;
+	left:458px;
+	}
+
+#li3_show{
+	background:url('/images/template/bg_tag_menu.png') no-repeat;
+	width:103px;
+	height:31px;
+	position:absolute;
+	z-index:10;
+	font-family:Tahoma;
+	font-size:12px;
+	color:#fff;
+	text-align:center;
+	vertical-align:central;
+	line-height:37px;
+	top:40px;
+	left:503px;
+	}
+
+#li4_show{
+	background:url('/images/template/bg_tag_menu.png') no-repeat;
+	width:103px;
+	height:31px;
+	position:absolute;
+	z-index:10;
+	font-family:Tahoma;
+	font-size:12px;
+	color:#fff;
+	text-align:center;
+	vertical-align:central;
+	line-height:37px;
+	top:40px;
+	left:548px;
+	}
+
+#li5_show{
+	background:url('/images/template/bg_tag_menu.png') no-repeat;
+	width:103px;
+	height:31px;
+	position:absolute;
+	z-index:10;
+	font-family:Tahoma;
+	font-size:12px;
+	color:#fff;
+	text-align:center;
+	vertical-align:central;
+	line-height:37px;
+	top:40px;
+	left:593px;
+	}
