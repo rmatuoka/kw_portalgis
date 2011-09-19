@@ -63,7 +63,9 @@ KwPortalgis::Application.routes.draw do |map|
     resources :comments
   }
   resources :profile
-  
+  resources(:messages){
+    resources :replies
+  }
   
   map.first_step "first_step", :controller => "users", :action => "edit"
   map.login "login", :controller => "user_sessions", :action => "new"

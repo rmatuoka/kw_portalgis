@@ -100,6 +100,11 @@
 			margin-right:5px;
 		}
 		
+		#Feed #Feed_Header a
+		{
+			float:left;
+		}
+		
 		#Feed #Post
 		{
 			padding-bottom:20px;

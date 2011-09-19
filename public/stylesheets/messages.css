@@ -1,0 +1,63 @@
+#Message
+{
+	
+}
+
+	#Message #MessageHeader
+	{
+		background-color:#e1f3ff;
+		min-height:40px;
+		height:auto;
+		padding:10px;
+	}
+	
+		#Message #MessageHeader h2
+		{
+			font-family:Tahoma;
+			font-size:14px;
+			color:#0265a4 !important;
+			font-weight:normal;
+			float:left;
+		}
+		
+		#Message #MessageHeader a
+		{
+			color:#0265a4 !important;
+		
+		}
+		
+			#Message #MessageHeader #PublishedDate
+			{
+				font-family:Tahoma;
+				font-size:12px;
+				color:#6f6f6f !important;				
+			}
+			
+			#Message #MessageHeader #PublishedDate .pub
+			{
+				float:left;	
+			}
+			
+			#Message #MessageHeader #PublishedDate .unpub
+			{
+				float:right;	
+			}
+	
+	#Message #MessageContent
+	{
+		margin-top:2px;
+		background-color:#f2f2f2;
+		min-height:68px;
+		height:auto;
+		padding:10px;
+		font-family:Tahoma;
+		font-size:12px;
+		color:#6f6f6f !important;
+	}
+	
+		#Message #MessageContent p
+		{
+			font-family:Tahoma;
+			font-size:12px;
+			color:#6f6f6f !important;
+		}

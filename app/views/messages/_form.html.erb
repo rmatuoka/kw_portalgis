@@ -1,0 +1,23 @@
+<% form_for @message do |f| %>
+<%= f.error_messages %>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td class="DataLabel">Para:</td>
+		<td class="DataInput"><p><%=@to.name%></p><%=f.hidden_field :to_id, :value => @to.id%><%=f.hidden_field :from_id, :value => current_user.id%></td>
+	</tr>
+	<tr>
+		<td class="DataLabel">Título</td>
+		<td class="DataInput"><%= f.text_field :title, :class => "form"%></td>
+	</tr>
+	<tr>
+		<td class="DataLabel">Mensagem</td>
+		<td class="DataInput"><%= f.text_area :message, :class => "textarea"%></td>
+	</tr>
+</table>
+
+<p class="Send">
+	<%=image_submit_tag("template/buttons/publicar.png")%>
+</p>
+<div class="Clear"></div>
+<%end%>
