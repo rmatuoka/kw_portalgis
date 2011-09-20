@@ -63,6 +63,7 @@ KwPortalgis::Application.routes.draw do |map|
     resources :comments
   }
   resources :profile
+  resources :media_center
   
   
   map.first_step "first_step", :controller => "users", :action => "edit"
